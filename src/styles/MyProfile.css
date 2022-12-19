@@ -1,0 +1,11 @@
+.profile {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 100px;
+  gap: 30px;
+}
+
+.profile div {
+  flex: 1;
+}

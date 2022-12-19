@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default NavBar = () => {
+const NavBar = () => <img src="../images/planet.png" alt="logo" />;
 
-};
+export default NavBar;

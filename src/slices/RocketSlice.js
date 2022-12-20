@@ -1,13 +1,8 @@
 /* eslint-disable no-param-reassign */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
-  loading: false,
-  rockets: [],
-  error: null,
-};
 export const getRockets = createAsyncThunk('rockets/fetchRockets', async () => {
-  const res = await fetch('https://api.spacexdata.com/v3/missions', {
+  const res = await fetch(process.env.REACT_APP_ROCKETS, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -19,23 +14,26 @@ export const getRockets = createAsyncThunk('rockets/fetchRockets', async () => {
 
 const RocketSlice = createSlice({
   name: 'rocket',
-  initialState,
+  initialState: {
+    loading: false,
+    error: null,
+    rockets: [],
+  },
   reducers: {
   },
   extraReducers: (builder) => {
-    builder.addCase(getRockets.pending, (state) => {
-      state.loading = true;
-    });
-    builder.addCase(getRockets.fulfilled, (state, actions) => {
-      state.loading = false;
-      state.rockets = actions.payload;
-      state.error = null;
-    });
-    builder.addCase(getRockets.rejected, (state, actions) => {
-      state.loading = false;
-      state.rockets = [];
-      state.error = actions.error.message;
-    });
+    builder
+      .addCase(getRockets.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(getRockets.fulfilled, (state, action) => {
+        state.loading = false;
+        state.rockets = action.payload;
+      })
+      .addCase(getRockets.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
+      });
   },
 });
 

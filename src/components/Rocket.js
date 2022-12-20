@@ -1,32 +1,20 @@
 import React from 'react';
-import rocketImg from '../images/planet.png';
+import PropTypes from 'prop-types';
 
-const Rocket = () => (
+const Rocket = ({ name, image, description }) => (
   <div className="card">
-    <img src={rocketImg} alt="rocketIMG" />
+    <img src={image} alt="rocketIMG" />
     <div className="rocket-info">
-      <h2>Falcon 1</h2>
-      <p>
-        Lorem Ipsum is simply dummy text of the
-        printing and typesetting industry.
-        Lorem Ipsum has been the industry&lsquo;s standard
-        dummy text ever since the 1500s,
-        when an unknown printer took a galley of type
-        and scrambled it to make a type
-        specimen book.
-        It has survived not only five centuries, but
-        also the leap into electronic
-        typesetting, remaining
-        essentially unchanged. It was popularised in
-        the 1960s with the release of Letraset
-        sheets containing
-        Lorem Ipsum passages, and more recently with
-        desktop publishing software like Aldus
-        PageMaker
-        including versions of Lorem Ipsum
-      </p>
+      <h2>{name}</h2>
+      <p>{description}</p>
       <button type="button">Reserve rocket</button>
     </div>
   </div>
 );
+
+Rocket.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+};
 export default Rocket;

@@ -1,17 +1,24 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../styles/Rockets.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Rocket from './Rocket';
-import { getRockets } from '../slices/RocketSlice';
 
 const Rockets = () => {
-  const rockets = useSelector((state) => state.rockets);
-  console.log(rockets);
+  const { rockets, loading } = useSelector((state) => state.rockets);
+  if (loading) {
+    return <h2>loading...</h2>;
+  }
   return (
-
     <section className="rockets">
       <div className="container" />
-      {!rockets.loading && rockets.error == null ? rockets.rockets.map((roc) => <Rocket key={roc.id} />) : ''}
+      {rockets.map((rocket) => (
+        <Rocket
+          key={rocket.id}
+          name={rocket.rocket_name}
+          image={rocket.flickr_images[0]}
+          description={rocket.description}
+        />
+      ))}
     </section>
   );
 };

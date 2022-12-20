@@ -7,9 +7,11 @@ import MyProfile from './components/MyProfile';
 import Rockets from './components/Rockets';
 import NavBar from './components/NavBar';
 import MessionList from './components/MessionList';
+import { getRockets } from './slices/RocketSlice';
 
 function App() {
   const dispatch = useDispatch();
+  dispatch(getRockets());
   dispatch(fetchMissions());
   return (
     <div className="App">

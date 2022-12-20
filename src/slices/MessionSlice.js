@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchMissions = createAsyncThunk('missions/fetchMissions', async () => {
@@ -19,25 +20,32 @@ const MessionSlice = createSlice({
     messions: [],
   },
   reducers: {
+    joinMission: (state, action) => {
+      const id = action.payload;
+      state.messions = state.messions.map((mission) => {
+        if (mission.mission_id === id) {
+          return { ...mission, joined: true };
+        }
+        return mission;
+      });
+    },
   },
   extraReducers(builder) {
     builder
       .addCase(fetchMissions.pending, (state) => {
-        // eslint-disable-next-line no-param-reassign
         state.loading = true;
       })
       .addCase(fetchMissions.fulfilled, (state, action) => {
-        // eslint-disable-next-line no-param-reassign
         state.loading = false;
-        // eslint-disable-next-line no-param-reassign
-        state.messions = [...state.messions, ...action.payload];
+        state.messions = action.payload;
       })
       .addCase(fetchMissions.rejected, (state, action) => {
-        // eslint-disable-next-line no-param-reassign
         state.loading = false;
-        // eslint-disable-next-line no-param-reassign
         state.error = action.error.message;
       });
   },
 });
+
+export const { joinMission } = MessionSlice.actions;
+
 export default MessionSlice.reducer;

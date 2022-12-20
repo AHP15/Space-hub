@@ -8,7 +8,7 @@ export const fetchMissions = createAsyncThunk('missions/fetchMissions', async ()
     },
   });
   const data = await res.json();
-  return data;
+  return data.map((mission) => ({ ...mission, joined: false }));
 });
 
 const MessionSlice = createSlice({

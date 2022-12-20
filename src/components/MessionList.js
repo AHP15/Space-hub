@@ -30,6 +30,7 @@ const MessionList = () => {
               missionName={mission.mission_name}
               description={mission.description}
               changeBg={i % 2 === 0}
+              joined={mission.joined}
             />
           ))
         }

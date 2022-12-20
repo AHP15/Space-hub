@@ -6,11 +6,22 @@ const initialState = {
   rockets: [],
   error: null,
 };
-export const getRockets = createAsyncThunk('rockets/fetchRockets', () => fetch('https://api.spacexdata.com/v3/rockets').then((data) => data.json()));
+export const getRockets = createAsyncThunk('rockets/fetchRockets', async () => {
+  const res = await fetch('https://api.spacexdata.com/v3/missions', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  const data = await res.json();
+  return data;
+});
 
 const RocketSlice = createSlice({
   name: 'rocket',
   initialState,
+  reducers: {
+  },
   extraReducers: (builder) => {
     builder.addCase(getRockets.pending, (state) => {
       state.loading = true;

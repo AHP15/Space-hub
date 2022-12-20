@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 // eslint-disable-next-line object-curly-newline, no-unused-vars
-const MessionRow = ({ id, missionName, description, changeBg }) => {
+const MessionRow = ({ id, missionName, description, changeBg, joined }) => {
   const handleJoin = () => {
   };
 
@@ -24,6 +24,7 @@ MessionRow.propTypes = {
   missionName: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   changeBg: PropTypes.bool.isRequired,
+  joined: PropTypes.bool.isRequired,
 };
 
 export default MessionRow;

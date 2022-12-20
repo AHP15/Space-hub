@@ -1,0 +1,20 @@
+.mession_table {
+  margin: 20px 70px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.table_head th,
+.table_head td {
+  padding: 20px;
+  text-align: start;
+  border: 1px solid lightgray;
+}
+
+.btn_row p {
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  text-align: center;
+}

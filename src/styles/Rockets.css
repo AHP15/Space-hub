@@ -22,3 +22,9 @@
   color: white;
   font-size: 18px;
 }
+
+.rockets .card button.booked {
+  background-color: white;
+  border: 1px solid #adadad;
+  color: #adadad;
+}

@@ -5,6 +5,7 @@ import Rocket from './Rocket';
 
 const Rockets = () => {
   const { rockets, loading } = useSelector((state) => state.rockets);
+
   if (loading) {
     return <h2>loading...</h2>;
   }
@@ -17,6 +18,8 @@ const Rockets = () => {
           name={rocket.rocket_name}
           image={rocket.flickr_images[0]}
           description={rocket.description}
+          id={rocket.id}
+          reserved={rocket.reserved}
         />
       ))}
     </section>

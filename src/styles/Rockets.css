@@ -1,3 +1,7 @@
+.rockets {
+  padding: 15px;
+}
+
 .rockets .card {
   display: flex;
   gap: 15px;

@@ -1,14 +1,26 @@
 import React from 'react';
 import '../styles/Rockets.css';
+import { useSelector } from 'react-redux';
 import Rocket from './Rocket';
 
-const Rockets = () => (
-  <section className="rockets">
-    <div className="container" />
-    <Rocket />
-    <Rocket />
-    <Rocket />
-  </section>
-);
+const Rockets = () => {
+  const { rockets, loading } = useSelector((state) => state.rockets);
+  if (loading) {
+    return <h2>loading...</h2>;
+  }
+  return (
+    <section className="rockets">
+      <div className="container" />
+      {rockets.map((rocket) => (
+        <Rocket
+          key={rocket.id}
+          name={rocket.rocket_name}
+          image={rocket.flickr_images[0]}
+          description={rocket.description}
+        />
+      ))}
+    </section>
+  );
+};
 
 export default Rockets;

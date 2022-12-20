@@ -1,8 +1,15 @@
+import { useSelector } from 'react-redux';
+
 import MessionRow from './MessionRow';
 import '../styles/MessionList.css';
 
-// eslint-disable-next-line arrow-body-style
 const MessionList = () => {
+  const { messions, loading } = useSelector((state) => state.missions);
+
+  if (loading) {
+    // I will add more functionality here
+    return <div className="mession_table">Loading...</div>;
+  }
   return (
     <table className="mession_table">
       <thead>
@@ -16,11 +23,12 @@ const MessionList = () => {
 
       <tbody>
         {
-          Array(10).fill(null).map((_, i) => (
+          messions.map((mission, i) => (
             <MessionRow
-              key={Math.random()}
-              missionName="messtion name"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur delectus commodi ducimus sapiente voluptatibus illum, qui soluta quis perferendis inventore placeat culpa illo! Deserunt ducimus ab suscipit sint distinctio unde assumenda molestiae ipsum illum non reiciendis nesciunt exercitationem, quae quo quaerat nihil? Nihil dolore corrupti facilis nobis, vero cumque recusandae."
+              key={mission.mission_id + Math.random()}
+              id={mission.mission_id}
+              missionName={mission.mission_name}
+              description={mission.description}
               changeBg={i % 2 === 0}
             />
           ))

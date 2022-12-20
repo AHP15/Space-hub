@@ -5,7 +5,7 @@ import messionSlice from './MessionSlice';
 const Store = configureStore({
   reducer: {
     rockets: rocketsReduser,
-    mession: messionSlice,
+    missions: messionSlice,
   },
 });
 

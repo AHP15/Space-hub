@@ -1,26 +1,27 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Provider } from 'react-redux';
+import { useDispatch } from 'react-redux';
+
+import { fetchMissions } from './slices/MessionSlice';
 import MyProfile from './components/MyProfile';
 import Rockets from './components/Rockets';
 import NavBar from './components/NavBar';
-import Store from './slices/store';
 import MessionList from './components/MessionList';
 
 function App() {
+  const dispatch = useDispatch();
+  dispatch(fetchMissions());
   return (
-    <Provider store={Store}>
-      <div className="App">
-        <NavBar />
-        <div className="container">
-          <Routes>
-            <Route path="/" element={<Rockets />} />
-            <Route path="/profile" element={<MyProfile />} />
-            <Route path="missions" element={<MessionList />} />
-          </Routes>
-        </div>
+    <div className="App">
+      <NavBar />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Rockets />} />
+          <Route path="/profile" element={<MyProfile />} />
+          <Route path="missions" element={<MessionList />} />
+        </Routes>
       </div>
-    </Provider>
+    </div>
   );
 }
 

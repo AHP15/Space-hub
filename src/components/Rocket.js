@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { bookingRocket } from '../slices/RocketSlice';
+import { bookingRocket, unbookingRocket } from '../slices/RocketSlice';
 
 const Rocket = ({
   name, image, description, id, reserved,
@@ -13,7 +13,11 @@ const Rocket = ({
       id,
     };
 
-    dispatch(bookingRocket(obj));
+    if (reserved) {
+      dispatch(unbookingRocket(obj));
+    } else {
+      dispatch(bookingRocket(obj));
+    }
   };
 
   return (

@@ -4,7 +4,8 @@ import { Provider } from 'react-redux';
 import MyProfile from './components/MyProfile';
 import Rockets from './components/Rockets';
 import NavBar from './components/NavBar';
-import Store from './redux/SpaceStore';
+import Store from './slices/store';
+import MessionList from './components/MessionList';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Rockets />} />
             <Route path="/profile" element={<MyProfile />} />
+            <Route path="missions" element={<MessionList />} />
           </Routes>
         </div>
       </div>

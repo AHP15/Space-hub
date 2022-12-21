@@ -2,10 +2,26 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 20px 100px;
+  padding: 20px 50px;
   gap: 30px;
 }
 
 .profile div {
   flex: 1;
+}
+
+.rockets h2 {
+  font-weight: 500;
+}
+
+.rockets ul {
+  list-style: none;
+  border: 1px solid #acacac;
+  margin-top: 15px;
+}
+.rockets ul li {
+  padding: 15px 0 20px 20px;
+}
+.rockets ul li:not(:last-child) {
+  border-bottom: 1px solid #acacac;
 }

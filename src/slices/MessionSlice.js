@@ -29,6 +29,15 @@ const MessionSlice = createSlice({
         return mission;
       });
     },
+    leaveMission: (state, action) => {
+      const id = action.payload;
+      state.messions = state.messions.map((mission) => {
+        if (mission.mission_id === id) {
+          return { ...mission, joined: false };
+        }
+        return mission;
+      });
+    },
   },
   extraReducers(builder) {
     builder
@@ -46,6 +55,6 @@ const MessionSlice = createSlice({
   },
 });
 
-export const { joinMission } = MessionSlice.actions;
+export const { joinMission, leaveMission } = MessionSlice.actions;
 
 export default MessionSlice.reducer;

@@ -14,8 +14,26 @@
 .btn_row button {
   font-size: 14px;
   cursor: pointer;
-  border: 1px solid lightgray;
+  border: 1px solid grey;
   border-radius: 5px;
   text-align: center;
   padding: 5px 10px;
+  color: grey;
+  background-color: transparent;
+}
+
+.btn_row .not_member {
+  background-color: grey;
+  color: white;
+}
+
+.btn_row .member {
+  background-color: rgb(52, 129, 154);
+  color: white;
+  border: 1px solid rgb(52, 129, 154);
+}
+
+.btn_row .joined {
+  color: red;
+  border: 1px solid red;
 }

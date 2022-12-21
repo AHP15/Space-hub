@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders MessionRow correctly 1`] = `
+<div
+  className="card"
+>
+  <img
+    alt="rocketIMG"
+    src="rocket image"
+  />
+  <div
+    className="rocket-info"
+  >
+    <h2>
+      Falcon 1
+    </h2>
+    <p>
+      Rocket description
+    </p>
+    <button
+      className=""
+      onClick={[Function]}
+      title="isMember"
+      type="button"
+    >
+      Reserve rocket
+    </button>
+  </div>
+</div>
+`;
+
+exports[`renders Rocket correctly 1`] = `
+<div
+  className="card"
+>
+  <img
+    alt="rocketIMG"
+    src="rocket image"
+  />
+  <div
+    className="rocket-info"
+  >
+    <h2>
+      Falcon 1
+    </h2>
+    <p>
+      Rocket description
+    </p>
+    <button
+      className=""
+      onClick={[Function]}
+      title="isMember"
+      type="button"
+    >
+      Reserve rocket
+    </button>
+  </div>
+</div>
+`;

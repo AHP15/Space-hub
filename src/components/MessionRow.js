@@ -23,7 +23,7 @@ const MessionRow = ({ id, missionName, description, changeBg, joined }) => {
       <th>{missionName}</th>
       <td>{description}</td>
       <td className="btn_row">
-        <button className={joined ? 'member' : 'not_member'} type="button">
+        <button title="isMember" className={joined ? 'member' : 'not_member'} type="button">
           {joined ? 'Active Member' : 'NOT A MEMBER'}
         </button>
       </td>

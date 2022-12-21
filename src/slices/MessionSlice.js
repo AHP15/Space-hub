@@ -12,12 +12,19 @@ export const fetchMissions = createAsyncThunk('missions/fetchMissions', async ()
   return data.map((mission) => ({ ...mission, joined: false }));
 });
 
+const createMissionJustForTest = (joined) => ({
+  mission_id: 'id',
+  mission_name: 'mission name',
+  description: 'mission description',
+  joined,
+});
+
 const MessionSlice = createSlice({
   name: 'mession',
   initialState: {
     loading: false,
     error: null,
-    messions: [],
+    messions: [createMissionJustForTest(false), createMissionJustForTest(true)],
   },
   reducers: {
     joinMission: (state, action) => {

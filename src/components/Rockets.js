@@ -11,7 +11,7 @@ const Rockets = () => {
   }
   return (
     <section className="rockets">
-      <div className="container">
+      <div className="rockets-container">
         {rockets.map((rocket) => (
           <Rocket
             key={rocket.id}

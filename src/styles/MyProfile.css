@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 20px 50px;
+  padding: 60px 100px;
   gap: 30px;
 }
 
@@ -10,8 +10,15 @@
   flex: 1;
 }
 
-.rockets h2 {
+.profile div h2 {
+  margin-bottom: 20px;
   font-weight: 500;
+}
+
+.mission_name {
+  padding: 20px;
+  border: 1px solid lightgray;
+  margin: 5px;
 }
 
 .rockets ul {

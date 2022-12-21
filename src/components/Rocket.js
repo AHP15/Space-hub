@@ -26,7 +26,7 @@ const Rocket = ({
       <div className="rocket-info">
         <h2>{name}</h2>
         <p>{description}</p>
-        <button type="button" onClick={booking} className={reserved ? 'booked' : ''}>{reserved ? 'Cancel reservation' : 'Reserve rocket'}</button>
+        <button title="isMember" type="button" onClick={booking} className={reserved ? 'booked' : ''}>{reserved ? 'Cancel reservation' : 'Reserve rocket'}</button>
       </div>
     </div>
   );

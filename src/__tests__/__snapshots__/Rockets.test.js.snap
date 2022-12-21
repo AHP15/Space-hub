@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing Rockets 1`] = `
+<section
+  className="rockets"
+>
+  <div
+    className="rockets-container"
+  >
+    <div
+      className="card"
+    >
+      <img
+        alt="rocketIMG"
+        src="first image"
+      />
+      <div
+        className="rocket-info"
+      >
+        <h2>
+          mission name
+        </h2>
+        <p>
+          mission description
+        </p>
+        <button
+          className="booked"
+          onClick={[Function]}
+          title="isMember"
+          type="button"
+        >
+          Cancel reservation
+        </button>
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <img
+        alt="rocketIMG"
+        src="first image"
+      />
+      <div
+        className="rocket-info"
+      >
+        <h2>
+          mission name
+        </h2>
+        <p>
+          mission description
+        </p>
+        <button
+          className=""
+          onClick={[Function]}
+          title="isMember"
+          type="button"
+        >
+          Reserve rocket
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+`;

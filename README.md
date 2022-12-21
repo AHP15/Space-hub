@@ -34,11 +34,8 @@
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 [Space-Hub] <a name="about-project"></a>
-This a React and redux application
-
-## PULL REQUESTS
-- [pull request](https://github.com/Abdessittir/JavaScript-capstone/pull/27)
-- [pull request-2](https://github.com/Abdessittir/JavaScript-capstone/pull/22)
+This a React and redux application, that displays a list of rockets and allow the user to reserve
+one, and a list of missions and allow the user to join them
 
 ## 🛠 Built With <a name="built-with"></a>
 

@@ -11,17 +11,18 @@ const Rockets = () => {
   }
   return (
     <section className="rockets">
-      <div className="container" />
-      {rockets.map((rocket) => (
-        <Rocket
-          key={rocket.id}
-          name={rocket.rocket_name}
-          image={rocket.flickr_images[0]}
-          description={rocket.description}
-          id={rocket.id}
-          reserved={rocket.reserved}
-        />
-      ))}
+      <div className="container">
+        {rockets.map((rocket) => (
+          <Rocket
+            key={rocket.id}
+            name={rocket.rocket_name}
+            image={rocket.flickr_images[0]}
+            description={rocket.description}
+            id={rocket.id}
+            reserved={rocket.reserved}
+          />
+        ))}
+      </div>
     </section>
   );
 };

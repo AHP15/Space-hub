@@ -5,7 +5,6 @@ import '../styles/MessionList.css';
 
 const MessionList = () => {
   const { messions, loading } = useSelector((state) => state.missions);
-
   if (loading) {
     // I will add more functionality here
     return <div className="mession_table">Loading...</div>;

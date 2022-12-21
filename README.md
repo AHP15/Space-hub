@@ -169,6 +169,6 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](https://github.com/Abdessittir/Space-hub/MIT.md) licensed.
+This project is [MIT](https://github.com/Abdessittir/Space-hub/blob/dev/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

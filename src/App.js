@@ -1,6 +1,7 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
 import { fetchMissions } from './slices/MessionSlice';
 import MyProfile from './components/MyProfile';
@@ -11,8 +12,19 @@ import { getRockets } from './slices/RocketSlice';
 
 function App() {
   const dispatch = useDispatch();
-  dispatch(getRockets());
-  dispatch(fetchMissions());
+  const location = useLocation();
+
+  useEffect(() => {
+    dispatch(getRockets());
+  }, []);
+
+  const { messions } = useSelector((state) => state.missions);
+  useEffect(() => {
+    if (messions.length <= 2 && location.pathname === '/missions') {
+      dispatch(fetchMissions());
+    }
+  }, [location.pathname]);
+
   return (
     <div className="App">
       <NavBar />
@@ -20,7 +32,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Rockets />} />
           <Route path="/profile" element={<MyProfile />} />
-          <Route path="missions" element={<MessionList />} />
+          <Route path="/missions" element={<MessionList />} />
         </Routes>
       </div>
     </div>

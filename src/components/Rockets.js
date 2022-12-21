@@ -14,11 +14,11 @@ const Rockets = () => {
       <div className="rockets-container">
         {rockets.map((rocket) => (
           <Rocket
-            key={rocket.id}
+            key={String(rocket.id + Math.random())}
             name={rocket.rocket_name}
             image={rocket.flickr_images[0]}
             description={rocket.description}
-            id={rocket.id}
+            id={String(rocket.id)}
             reserved={rocket.reserved}
           />
         ))}

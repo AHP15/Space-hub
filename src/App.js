@@ -16,14 +16,14 @@ function App() {
 
   useEffect(() => {
     dispatch(getRockets());
-  }, []);
+  }, [dispatch]);
 
   const { messions } = useSelector((state) => state.missions);
   useEffect(() => {
     if (messions.length <= 2 && location.pathname === '/missions') {
       dispatch(fetchMissions());
     }
-  }, [location.pathname]);
+  }, [dispatch, location.pathname, messions.length]);
 
   return (
     <div className="App">

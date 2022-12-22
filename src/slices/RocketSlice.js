@@ -12,8 +12,8 @@ export const getRockets = createAsyncThunk('rockets/fetchRockets', async () => {
   return data;
 });
 
-const createRocketJustForTest = (reserved) => ({
-  id: 'id',
+const createRocketJustForTest = (reserved, id) => ({
+  id,
   flickr_images: ['first image', 'secound image'],
   rocket_name: 'mission name',
   description: 'mission description',
@@ -25,7 +25,7 @@ const RocketSlice = createSlice({
   initialState: {
     loading: false,
     error: null,
-    rockets: [createRocketJustForTest(true), createRocketJustForTest(false)],
+    rockets: [createRocketJustForTest(true, 7), createRocketJustForTest(false, 8)],
   },
   reducers: {
     bookingRocket: (state, action) => {

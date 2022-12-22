@@ -74,7 +74,7 @@ one, and a list of missions and allow the user to join them
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- N/A
+- [Live demo](https://space-hub-zeta.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -1,0 +1,36 @@
+.profile {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 60px 100px;
+  gap: 30px;
+}
+
+.profile div {
+  flex: 1;
+}
+
+.profile div h2 {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.mission_name {
+  padding: 20px;
+  border: 1px solid lightgray;
+  margin: 5px;
+}
+
+.rockets ul {
+  list-style: none;
+  border: 1px solid #acacac;
+  margin-top: 15px;
+}
+
+.rockets ul li {
+  padding: 15px 0 20px 20px;
+}
+
+.rockets ul li:not(:last-child) {
+  border-bottom: 1px solid #acacac;
+}

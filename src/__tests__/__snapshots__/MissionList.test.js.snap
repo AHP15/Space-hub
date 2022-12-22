@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders NavBar correctly 1`] = `
+<table
+  className="mession_table"
+>
+  <thead>
+    <tr
+      className="table_head"
+    >
+      <th>
+        Mission
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        Status
+      </th>
+      <th />
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      className="table_head"
+      style={
+        Object {
+          "backgroundColor": "rgba(211, 211, 211, 0.5)",
+        }
+      }
+    >
+      <th>
+        mission name
+      </th>
+      <td>
+        mission description
+      </td>
+      <td
+        className="btn_row"
+      >
+        <button
+          className="not_member"
+          title="isMember"
+          type="button"
+        >
+          NOT A MEMBER
+        </button>
+      </td>
+      <td
+        className="btn_row"
+      >
+        <button
+          className=""
+          onClick={[Function]}
+          type="button"
+        >
+          Join Mission
+        </button>
+      </td>
+    </tr>
+    <tr
+      className="table_head"
+      style={
+        Object {
+          "backgroundColor": "",
+        }
+      }
+    >
+      <th>
+        mission name
+      </th>
+      <td>
+        mission description
+      </td>
+      <td
+        className="btn_row"
+      >
+        <button
+          className="member"
+          title="isMember"
+          type="button"
+        >
+          Active Member
+        </button>
+      </td>
+      <td
+        className="btn_row"
+      >
+        <button
+          className="joined"
+          onClick={[Function]}
+          type="button"
+        >
+          Leave Mission
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

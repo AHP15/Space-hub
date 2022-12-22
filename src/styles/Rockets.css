@@ -1,0 +1,28 @@
+.rockets .card {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.rockets .card img {
+  width: 250px;
+}
+
+.rockets .card button {
+  background: #007bff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  color: white;
+  font-size: 18px;
+}
+
+.rockets .card button.booked {
+  background-color: white;
+  border: 1px solid #adadad;
+  color: #adadad;
+}

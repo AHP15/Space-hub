@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders MessionRow correctly 1`] = `
+<tr
+  className="table_head"
+  style={
+    Object {
+      "backgroundColor": "",
+    }
+  }
+>
+  <th>
+    mission name
+  </th>
+  <td>
+    mission description mission description mission description mission
+  </td>
+  <td
+    className="btn_row"
+  >
+    <button
+      className="not_member"
+      title="isMember"
+      type="button"
+    >
+      NOT A MEMBER
+    </button>
+  </td>
+  <td
+    className="btn_row"
+  >
+    <button
+      className=""
+      onClick={[Function]}
+      type="button"
+    >
+      Join Mission
+    </button>
+  </td>
+</tr>
+`;

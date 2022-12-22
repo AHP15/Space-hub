@@ -18,7 +18,7 @@ const Rockets = () => {
             name={rocket.rocket_name}
             image={rocket.flickr_images[0]}
             description={rocket.description}
-            id={String(rocket.id)}
+            id={Number(rocket.id)}
             reserved={rocket.reserved}
           />
         ))}
